@@ -38,7 +38,7 @@ Material:
     m_Ints: []
     m_Floats:
     - _DotMultiper: 4
-    - _MoveSpeed: 1
+    - _MoveSpeed: 0
     - _QueueControl: 0
     - _QueueOffset: 0
     m_Colors: []

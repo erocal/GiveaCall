@@ -16,6 +16,7 @@ public class ScrollingManager : MonoBehaviour
     public TMP_InputField InputField_Text_Color_B;
     public TMP_InputField InputField_Text_Color_A;
     public TMP_InputField InputField_Text_Speed;
+    public TMP_InputField InputField_Text_ScrollingText;
 
     [Header("GameObject")]
     public GameObject Scrolling_Text_Group;
@@ -51,6 +52,7 @@ public class ScrollingManager : MonoBehaviour
 
         SetScrollSpeed();
         SetTextColor();
+        SetText();
 
         // 檢測PC上的滑鼠點擊事件
         if (Input.GetMouseButtonDown(0))
@@ -93,6 +95,15 @@ public class ScrollingManager : MonoBehaviour
         {
             scrollingText._originalTextMesh.color = new Color(r, g, b, a);
         }
+
+    }
+
+    private void SetText()
+    {
+
+        if (scrollingText == null) return;
+
+        scrollingText._originalTextMesh.text = InputField_Text_ScrollingText.text;
 
     }
 
